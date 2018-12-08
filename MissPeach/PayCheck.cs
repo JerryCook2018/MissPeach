@@ -20,83 +20,93 @@ namespace MissPeach
         private int fedExemptions;
         private int stateExemptions;
         private double grossPay;
-        private double federalTax;
-        private double stateTax;
-        private double socialTax;
-        private double medicareTax;
-        private double directDeposit;
         private const double deskRent = 25.00;
+        //later use
+        private double hourlyPay { get; set; }
 
 
+        
         //from paycheck entry and w4"
-        public string getStudentFirstName(string firstName)
+        public void setStudentFirstName(string name)
+        {
+            firstName = name;
+        }
+
+        public void SetStudentLastName(string name)
+        {
+            lastName = name;
+        }
+        public string GetStudentFirstName()
         {
             //from student passed into this class
             return firstName;
         }
 
-        public string getStudentLastName(string lastName)
+        public string GetStudentLastName()
         {
             return lastName;
         }
-        
-        public void setPayPeriod()
+        public double GetGrossPay()
+        {
+            return grossPay;
+        }
+        public void SetPayPeriod()
         {
             postingDate = DateTime.Now.ToString("MM/dd/yyyy/");
         }
 
-        public string getPayPeroid()
+        public string GetPayPeroid()
         {
             return postingDate;
         }
 
-        public void setStudentId(int studentId)
+        public void SetStudentId(int studentId)
         {
             this.studentId = studentId;
         }
 
-        public int getStudentId()
+        public int GetStudentId()
         {
             return studentId;
         }
 
         // information from w4
-        public void setMaritalStatus(string maritalStatus)
+        public void SetMaritalStatus(string maritalStatus)
         {
             //should be got from database
             this.maritalStatus = maritalStatus;
         }
 
-        public string getMaritalStatus()
+        public string GetMaritalStatus()
         {
             return maritalStatus;
         }
 
         //should be got from w4
 
-        public void setFedExemptions(int fedExemptions)
+        public void SetFedExemptions(int fedExemptions)
         {
             this.fedExemptions = fedExemptions;
         }
 
-        public int getFedExemptions()
+        public int GetFedExemptions()
         {
             return fedExemptions;
         }
 
         //should be got from w4
 
-        public void setStateExemptions(int stateExemptions)
+        public void SetStateExemptions(int stateExemptions)
         {
             this.stateExemptions = stateExemptions;
         }
 
-        public int getStateExemptions()
+        public int GetStateExemptions()
         {
             return stateExemptions;
         }
 
-        public double getFederalTax()
+        public double GetFederalTax()
         {
             if (grossPay >= 114.46)
             {
@@ -105,7 +115,7 @@ namespace MissPeach
             return 0;
         }
 
-        public double getStateTax()
+        public double GetStateTax()
         {
             if (grossPay >= 63.46)
             {
@@ -114,7 +124,7 @@ namespace MissPeach
             return 0;
         }
 
-        public double getMedicareTax()
+        public double GetMedicareTax()
         {
             if (grossPay > 0)
             {
@@ -123,7 +133,7 @@ namespace MissPeach
             return 0;
         }
 
-        public double getSocialTax()
+        public double GetSocialTax()
         {
             if (grossPay > 0)
             {
@@ -132,24 +142,24 @@ namespace MissPeach
             return 0;
         }
         
-        public void setGrossPay(double grossPay)
+        public void SetGrossPay(double grossPay)
         {
             this.grossPay = grossPay;
         }
 
-        public double getDirectDeposit()
+        public double GetDirectDeposit()
         {
-            var fedTax = getFederalTax();
-            var stateTax = getStateTax();
-            var socialTax = getSocialTax();
-            var medicareTax = getMedicareTax();
+            var fedTax = GetFederalTax();
+            var stateTax = GetStateTax();
+            var socialTax = GetSocialTax();
+            var medicareTax = GetMedicareTax();
 
             var deposit = grossPay - fedTax - stateTax - socialTax - medicareTax;
             deposit -= deskRent;
             return deposit;
         }
-
-
+       
+       
 
         
     }
