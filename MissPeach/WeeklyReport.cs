@@ -6,5 +6,9 @@ namespace MissPeach
 {
     class WeeklyReport
     {
+        public void printReport()
+        {
+
+        }
     }
 }
