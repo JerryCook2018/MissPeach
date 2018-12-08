@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissPeach", "MissPeach\MissPeach.csproj", "{7EF8E310-6327-46B1-BFED-41ED55C11809}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MissPeach", "MissPeach\MissPeach.csproj", "{7EF8E310-6327-46B1-BFED-41ED55C11809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{3E32B568-FEE3-4734-8039-D6D50DA6D3FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7EF8E310-6327-46B1-BFED-41ED55C11809}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EF8E310-6327-46B1-BFED-41ED55C11809}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EF8E310-6327-46B1-BFED-41ED55C11809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E32B568-FEE3-4734-8039-D6D50DA6D3FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E32B568-FEE3-4734-8039-D6D50DA6D3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E32B568-FEE3-4734-8039-D6D50DA6D3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E32B568-FEE3-4734-8039-D6D50DA6D3FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,7 +27,7 @@ namespace MissPeach
 
         
         //from paycheck entry and w4"
-        public void setStudentFirstName(string name)
+        public void SetStudentFirstName(string name)
         {
             firstName = name;
         }
