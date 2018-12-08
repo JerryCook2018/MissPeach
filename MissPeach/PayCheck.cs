@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+//created to sync 
 namespace MissPeach
 {
     class PayCheck
