@@ -6,10 +6,16 @@ namespace MissPeach
 {
     class PayCheck
     {
+        public PayCheck()
+        {
+
+        }
         //data gathered from this paycheck entry to system by teacher
 
         private string postingDate;
         private int studentId;
+        private string firstName;
+        private string lastName;
         private string maritalStatus;
         private int fedExemptions;
         private int stateExemptions;
@@ -23,6 +29,17 @@ namespace MissPeach
 
 
         //from paycheck entry and w4"
+        public string getStudentFirstName(string firstName)
+        {
+            //from student passed into this class
+            return firstName;
+        }
+
+        public string getStudentLastName(string lastName)
+        {
+            return lastName;
+        }
+        
         public void setPayPeriod()
         {
             postingDate = DateTime.Now.ToString("MM/dd/yyyy/");
