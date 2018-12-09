@@ -35,6 +35,30 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual);
 
         }
-    }
+
+        [TestMethod]
+        public void testDirectDepositReturn()
+        {
+
+        PayCheck Student1payCheck = new PayCheck();
+
+        Student1payCheck.SetStudentFirstName("Tammy");
+            Student1payCheck.SetStudentLastName("Carlone");
+            Student1payCheck.SetMaritalStatus("Single");
+            Student1payCheck.SetStudentId(235);
+            Student1payCheck.SetGrossPay(10000);
+            Student1payCheck.SetFedExemptions(1);
+            Student1payCheck.SetStateExemptions(2);
+
+            WeeklyReport TammyReport = new WeeklyReport(Student1payCheck);
+        // TammyReport.printReport();
+        double DirectDeposit = Student1payCheck.GetDirectDeposit();
+
+        Assert.AreEqual(2253.92094, DirectDeposit);
+
+        }
+
+
+}
 
 }
