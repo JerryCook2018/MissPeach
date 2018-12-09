@@ -139,7 +139,7 @@ namespace MissPeach
         {
             if (grossPay > 0)
             {
-                return (grossPay * 0.62);
+                return (grossPay * 0.062);
             }
             return 0;
         }
@@ -160,7 +160,7 @@ namespace MissPeach
             deposit -= deskRent;
             return deposit;
         }
-       
+
        
         
         

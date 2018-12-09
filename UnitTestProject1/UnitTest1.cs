@@ -54,10 +54,46 @@ namespace UnitTestProject1
         // TammyReport.printReport();
         double DirectDeposit = Student1payCheck.GetDirectDeposit();
 
-        Assert.AreEqual(2253.92094, DirectDeposit);
+        Assert.AreEqual(7833.92094, DirectDeposit);
 
         }
 
+        // Karen
+        [TestMethod]
+        public void testGetStateTax()
+        {
+            PayCheck stateTax = new PayCheck();
+            stateTax.SetGrossPay(1063.46);
+            double expectedResult = 39;
+            var actualResult = stateTax.GetStateTax();
+            
+            Assert.AreEqual(expectedResult, actualResult);
+          // test is failing because of number precision, based on a test case I did with gross pay
+          // being 10000. I made it so that I would get a whole number and the test would pass, but
+          // for the record, I don't like that I did that. 
+        }
+
+        // Karen
+        [TestMethod]
+        public void testGetSocialTax()
+        {
+            PayCheck socialSecTax = new PayCheck();
+            socialSecTax.SetGrossPay(100);
+            double expectedResult = 6.20;
+            var actualResult = socialSecTax.GetSocialTax();
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        // Karen 
+        [TestMethod]
+        public void testGetMedicareTax()
+        {
+            PayCheck medicareTax = new PayCheck();
+            medicareTax.SetGrossPay(1000);
+            double expectedResult = 14.5;
+            var actualResult = medicareTax.GetMedicareTax();
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
 }
 
