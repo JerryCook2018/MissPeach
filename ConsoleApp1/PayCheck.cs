@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-//created to sync 
-namespace MissPeach
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
 {
     public class PayCheck
     {
@@ -25,7 +27,7 @@ namespace MissPeach
         private decimal hourlyPay { get; set; }
 
 
-        
+
         //from paycheck entry and w4"
         public void SetStudentFirstName(string name)
         {
@@ -46,10 +48,9 @@ namespace MissPeach
         {
             return lastName;
         }
-        public string  GetGrossPay()
-        {            
-            var pay = grossPay.ToString("{0.00}") ;
-            Console.Out.WriteLine(pay);
+        public string GetGrossPay()
+        {
+            var pay = grossPay.ToString("C2");          
             return pay;
         }
         public void SetPayPeriod()
@@ -143,7 +144,7 @@ namespace MissPeach
             }
             return 0;
         }
-        
+
         public void SetGrossPay(double grossPay)
         {
             this.grossPay = grossPay;
@@ -160,10 +161,9 @@ namespace MissPeach
             deposit -= deskRent;
             return deposit;
         }
-       
-       
 
-        
+
+
+
     }
-
 }

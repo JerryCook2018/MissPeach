@@ -1,30 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-
-
-namespace MissPeach
+namespace ConsoleApp1
 {
-   public  class WeeklyReport
+    class WeeklyReport
     {
         PayCheck payCheck;
         public WeeklyReport(PayCheck payCheck)
         {
             this.payCheck = payCheck;
         }
-        
+
         public void printReport()
         {
             Console.Out.WriteLine("                                                            Earnings Statement");
             Console.Out.WriteLine();
-            Console.Out.WriteLine("   Kelly Elementary School                                  Peroid Ending: {0}",payCheck.GetPayPeroid());
-            Console.Out.WriteLine("   5150 RiverSide Drive                                     Pay Date:      {0}",payCheck.GetPayPeroid());
+            Console.Out.WriteLine("   Kelly Elementary School                                  Peroid Ending: {0}", payCheck.GetPayPeroid());
+            Console.Out.WriteLine("   5150 RiverSide Drive                                     Pay Date:      {0}", payCheck.GetPayPeroid());
             Console.Out.WriteLine("   Marshall, MI 49068");
 
             Console.Out.WriteLine("   Taxable Marital Status: {0}", payCheck.GetMaritalStatus());
             Console.Out.WriteLine("   Exemptions/Allowences:");
-            Console.Out.WriteLine("      Federal: {0}                                         {1} {2}", payCheck.GetFedExemptions(),payCheck.GetStudentFirstName(),payCheck.GetStudentLastName());
+            Console.Out.WriteLine("      Federal: {0}                                         {1} {2}", payCheck.GetFedExemptions(), payCheck.GetStudentFirstName(), payCheck.GetStudentLastName());
             Console.Out.WriteLine("      State:   {0}", payCheck.GetStateExemptions());
             Console.Out.WriteLine();
             Console.Out.WriteLine();
@@ -44,7 +44,7 @@ namespace MissPeach
             Console.Out.WriteLine("               Direct Deposit                                -{0}                    {1}", payCheck.GetDirectDeposit(), payCheck.GetDirectDeposit());
             Console.Out.WriteLine();
             Console.Out.WriteLine("               Net Pay                                        $0.00");
-        
+
         }
     }
 }
