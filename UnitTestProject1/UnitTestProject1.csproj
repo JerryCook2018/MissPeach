@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\MissPeachProgram.csproj" />
+    <ProjectReference Include="..\MissPeach\MissPeach.csproj" />
   </ItemGroup>
 
 </Project>

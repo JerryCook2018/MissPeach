@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Payroll group Jerry, Nathan, Karen
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 //created to sync 
@@ -22,7 +24,7 @@ namespace MissPeach
         private double grossPay;
         private const double deskRent = 25.00;
         //later use
-        private decimal hourlyPay { get; set; }
+        private double hourlyPay { get; set; }
 
 
         
@@ -46,11 +48,9 @@ namespace MissPeach
         {
             return lastName;
         }
-        public string  GetGrossPay()
-        {            
-            var pay = grossPay.ToString("{0.00}") ;
-            Console.Out.WriteLine(pay);
-            return pay;
+        public double GetGrossPay()
+        {
+            return grossPay;
         }
         public void SetPayPeriod()
         {
@@ -162,7 +162,7 @@ namespace MissPeach
         }
        
        
-
+        
         
     }
 

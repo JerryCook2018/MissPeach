@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Payroll group Jerry, Nathan, Karen
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +8,7 @@ using System.Text;
 
 namespace MissPeach
 {
-   public  class WeeklyReport
+  public  class WeeklyReport
     {
         PayCheck payCheck;
         public WeeklyReport(PayCheck payCheck)
