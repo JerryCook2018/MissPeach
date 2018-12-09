@@ -32,8 +32,8 @@ namespace MissPeach
             Console.Out.WriteLine();
             Console.Out.WriteLine("   Earnings            rate              hours                this period         year to date");
             Console.Out.WriteLine("   ----------------------------------------------------------------------         ------------");
-            Console.Out.WriteLine("   Regular             {0}                                    {1}                    {3}", payCheck.GetGrossPay().ToString("C2"), payCheck.GetGrossPay().ToString("C2"), payCheck.GetGrossPay().ToString("C2");
-            Console.Out.WriteLine("               Gross Pay                                      {0}                    {2}", payCheck.GetGrossPay().ToString("C2"), payCheck.GetGrossPay().ToString("C2");
+            Console.Out.WriteLine("   Regular             {0}                                    {1}                    {3}", payCheck.GetGrossPay().ToString("C2"), payCheck.GetGrossPay().ToString("C2"), payCheck.GetGrossPay().ToString("C2"));
+            Console.Out.WriteLine("               Gross Pay                                      {0}                    {2}", payCheck.GetGrossPay().ToString("C2"), payCheck.GetGrossPay().ToString("C2"));
             Console.Out.WriteLine();
             Console.Out.WriteLine("   Deductions  Statutory");
             Console.Out.WriteLine("               Federal Income Tax                            -{0}                    {1}", payCheck.GetFederalTax().ToString("F"), payCheck.GetFederalTax().ToString("F"));
