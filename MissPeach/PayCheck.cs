@@ -121,7 +121,7 @@ namespace MissPeach
         {
             if (grossPay >= 63.46)
             {
-                return (grossPay - 63.46) * 0.39;
+                return (grossPay - 63.46) * 0.039;
             }
             return 0;
         }
@@ -130,7 +130,7 @@ namespace MissPeach
         {
             if (grossPay > 0)
             {
-                return (grossPay * 0.145);
+                return (grossPay * 0.0145);
             }
             return 0;
         }
