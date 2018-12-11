@@ -11,6 +11,7 @@ namespace MissPeach
         static void  Main(string[] args)
         {
             PayCheck studentCheck = new PayCheck();
+            //Test comment
             
 
         studentCheck.SetStudentFirstName("Tammy");
