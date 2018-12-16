@@ -22,7 +22,7 @@ namespace MissPeach
             studentCheck.SetFedExemptions(1);
             studentCheck.SetStateExemptions(2);
             studentCheck.SetPayPeriod();
-            studentCheck.GetDirectDeposit();
+            studentCheck.GetDirectDeposit(studentCheck.GetFederalTax(),studentCheck.GetStateTax(),studentCheck.GetSocialTax(),studentCheck.GetMedicareTax());
 
             WeeklyReport earningsStatement = new WeeklyReport(studentCheck);
 

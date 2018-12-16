@@ -149,13 +149,9 @@ namespace MissPeach
             this.grossPay = grossPay;
         }
 
-        public double GetDirectDeposit()
+        public double GetDirectDeposit(double fedTax,double stateTax,double socialTax, double medicareTax)
         {
-            var fedTax = GetFederalTax();
-            var stateTax = GetStateTax();
-            var socialTax = GetSocialTax();
-            var medicareTax = GetMedicareTax();
-
+           
             var deposit = grossPay - fedTax - stateTax - socialTax - medicareTax;
             deposit -= deskRent;
             return deposit;

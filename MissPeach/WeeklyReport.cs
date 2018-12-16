@@ -43,9 +43,12 @@ namespace MissPeach
             Console.Out.WriteLine();
             Console.Out.WriteLine("               Other");
             Console.Out.WriteLine("               ----------------------------------------------------------");
-            Console.Out.WriteLine("               Direct Deposit                                {0}                    {1}", payCheck.GetDirectDeposit().ToString("C2"), payCheck.GetDirectDeposit().ToString("C2"));
+            Console.Out.WriteLine("               Direct Deposit                                {0}                    {1}", payCheck.GetDirectDeposit(payCheck.GetFederalTax(),payCheck.GetStateTax(),
+                payCheck.GetSocialTax(),payCheck.GetMedicareTax()).ToString("C2"), payCheck.GetDirectDeposit(payCheck.GetFederalTax(), payCheck.GetStateTax()
+                , payCheck.GetSocialTax(), payCheck.GetMedicareTax()).ToString("C2"));
             Console.Out.WriteLine();
-            Console.Out.WriteLine("               Net Pay                                        {0}"                    , payCheck.GetDirectDeposit().ToString("C2"));
+            Console.Out.WriteLine("               Net Pay                                       {0}"                    , payCheck.GetDirectDeposit(payCheck.GetFederalTax(), payCheck.GetStateTax(),
+                 payCheck.GetSocialTax(), payCheck.GetMedicareTax()).ToString("C2"));
 
         }
     }
