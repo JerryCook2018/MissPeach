@@ -4,6 +4,7 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MissPeach;
+using Moq;
 
 
 namespace UnitTestProject1
@@ -11,6 +12,23 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
+        //Jerry Cook
+        [TestMethod]
+        public void ShouldGetDirectDeposit()
+        {
+            var expected = 145.82094;
+            var fedTax = 8.554;
+            var stateTax = 5.32506;
+            var medTax = 2.9;
+            var socialTax = 12.40;
+
+            var payCheckRepositoryMock = new Mock<IGrossPayRepository>();
+            payCheckRepositoryMock.Setup(pr => pr.getDeposit(fedTax, stateTax, socialTax, medTax)).Returns(145.82094);
+            var depositService = new DepositService(payCheckRepositoryMock.Object);
+            var actual = depositService.getDirectDeposit(fedTax, stateTax, socialTax, medTax);
+            Assert.AreEqual(expected, actual);
+
+        }
         //Jerry Cook
         [TestMethod]
         public void testReturnGrossPayFromPaycheckObject()
@@ -52,7 +70,8 @@ namespace UnitTestProject1
 
             WeeklyReport TammyReport = new WeeklyReport(Student1payCheck);
         // TammyReport.printReport();
-        double DirectDeposit = Student1payCheck.GetDirectDeposit();
+        double DirectDeposit = Student1payCheck.GetDirectDeposit(Student1payCheck.GetFederalTax(),
+            Student1payCheck.GetStateTax(),Student1payCheck.GetSocialTax(), Student1payCheck.GetMedicareTax());
 
         Assert.AreEqual(7833.92094, DirectDeposit);
 
